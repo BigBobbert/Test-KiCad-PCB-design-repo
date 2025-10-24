@@ -1,34 +1,57 @@
-# For PCBs designed using KiCad: http://www.kicad-pcb.org/
+# =======================================
+# KiCad Project .gitignore
+# =======================================
 
-# Temporary files
-*.000
+# ---- KiCad backup and autosave files ----
 *.bak
-*.bck
+*-backups/
+*.kicad_prl
+*.kicad_sch-bak
 *.kicad_pcb-bak
-*~
-_autosave-*
-[#]auto_saved_files[#]
+*.kicad_dru-bak
+*.kicad_sym-bak
+
+# ---- KiCad cache and temporary files ----
+*-cache.lib
+*-cache.dcm
 *.tmp
+*.swp
+*.swo
+*.kicad_pcb-bak
+*.kicad_sch-bak
 
-# Netlist files (exported from Eeschema)
+# ---- Generated outputs (can always be rebuilt) ----
 *.net
-
-# Autorouter files (exported from Pcbnew)
-*.dsn
-*.ses
-
-# Exported BOM files
 *.xml
 *.csv
+*.pos
+*.rpt
+*.gbr
+*.drl
+*.zip
+*.step
+*.stp
+*.3dshapes.zip
+*.pdf
 
-# Ignore the testproject files
-testproject.kicad_sch
-testproject.kicad_pro
-testproject.kicad_pcb
-testproject.kicad_prl
-testproject-backups
-fp-lib-table
-sym-lib-table
-fp-info-cache
-*-cache.lib
-*-rescue.lib
+# If you have export or fabrication folders:
+gerbers/
+fabrication/
+outputs/
+export/
+
+# ---- OS and IDE junk ----
+.DS_Store
+Thumbs.db
+ehthumbs.db
+__pycache__/
+*.pyc
+
+# ---- Optional: if using simulation ----
+*.spiceinit
+*.raw
+*.log
+
+# =======================================
+# End of KiCad .gitignore
+# =======================================
